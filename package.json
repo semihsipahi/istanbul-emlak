@@ -15,7 +15,12 @@
     }
   },
   "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx}": [
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": "prettier --write",
+    "*.{js,jsx}/": [
       "eslint --fix"
     ]
   },
